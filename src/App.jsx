@@ -5,14 +5,14 @@ import { NotFound } from "./Pages/NotFound"
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <>
       <BrowserRouter>
        <Routes>
          <Route index element = {<Home />} />
-         <Route path="*" element={< NotFound/>}/>
+         <Route path="*" element={<NotFound />}/>
        </Routes>
       </BrowserRouter>
     </>
