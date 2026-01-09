@@ -1,0 +1,39 @@
+.star-border-container {
+  position: relative;
+  display: inline-block;
+  padding: 12px 26px;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.star-border-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: var(--star-thickness);
+  border-radius: inherit;
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    var(--star-color),
+    transparent
+  );
+  animation: rotate var(--star-speed) linear infinite;
+  opacity: 0; /* IMPORTANT */
+  transition: opacity 0.4s ease;
+}
+
+.star-border-container:hover::before {
+  opacity: 1;
+}
+
+.star-border-container > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
