@@ -33,11 +33,7 @@ export const HeroSection = () => {
                 className="container max-w-5xl mx-auto text-center z-10 relative"
             >
                 <div className="space-y-6">
-                    <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-4 shadow-glass">
-                        <motion.span variants={fadeUp} className="text-sm font-medium text-white/80 tracking-wide">
-                            Portfolio 2026
-                        </motion.span>
-                    </div>
+
 
                     <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
                         <motion.span

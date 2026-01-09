@@ -46,24 +46,23 @@ export const Navbar = () => {
                     : "py-6 bg-transparent"
             )}
         >
-            <div className="container-custom flex items-center justify-between">
+            <div className="w-full px-6 md:px-12 flex items-center justify-between">
                 <a
-                    className="relative group text-2xl md:text-3xl font-light font-script text-white cursor-pointer"
+                    className="relative group text-4xl md:text-5xl font-display font-bold italic text-white cursor-pointer tracking-tighter"
                     href="#hero"
                     onClick={(e) => handleScroll(e, "#hero")}
                 >
-                    <span className="relative z-10 transition-colors duration-300 group-hover:text-primary-foreground">Nishanth D'souza</span>
-                    <span className="absolute -inset-2 rounded-lg bg-white/5 scale-75 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 -z-0" />
+                    <span className="relative z-10 transition-colors duration-300 group-hover:text-primary">ND</span>
                 </a>
 
                 {/* Desktop */}
-                <div className="hidden md:flex space-x-1 lg:space-x-2">
+                <div className="hidden md:flex space-x-4 lg:space-x-6">
                     {navItems.map((item, key) => (
                         <a
                             key={key}
                             href={item.href}
                             onClick={(e) => handleScroll(e, item.href)}
-                            className="px-4 py-2 rounded-full text-sm font-medium text-white/70 hover:text-white hover:bg-white/5 transition-all duration-300"
+                            className="px-5 py-2.5 rounded-full text-base font-medium text-white/80 hover:text-white hover:bg-white/5 transition-all duration-300"
                         >
                             {item.name}
                         </a>
