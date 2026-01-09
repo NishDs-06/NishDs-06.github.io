@@ -134,9 +134,9 @@ export const ProjectsSection = () => {
                                         <>
                                             <motion.button
                                                 onClick={(e) => { e.stopPropagation(); setSelectedId(null); }}
-                                                className="absolute top-4 right-4 z-30 p-2 bg-black/40 backdrop-blur-md rounded-full text-white hover:bg-white/20 transition-colors border border-white/10"
+                                                className="absolute top-4 right-4 z-50 p-2.5 bg-black/60 backdrop-blur-md rounded-full text-white hover:bg-white/20 transition-colors border border-white/20 shadow-lg"
                                             >
-                                                <X size={20} />
+                                                <X size={22} />
                                             </motion.button>
 
                                             <motion.div className="relative h-64 md:h-96 w-full shrink-0">

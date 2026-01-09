@@ -80,35 +80,34 @@ export const Navbar = () => {
 
                 {/* Mobile Menu */}
                 <AnimatePresence>
-                    {isMenuOpen && (
-                        <motion.div
-                            initial={{ opacity: 0, clipPath: "circle(0% at 90% 40px)" }}
-                            animate={{ opacity: 1, clipPath: "circle(150% at 90% 40px)" }}
-                            exit={{ opacity: 0, clipPath: "circle(0% at 90% 40px)" }}
-                            transition={{ duration: 0.5, ease: "easeInOut" }}
-                            className="fixed inset-0 bg-[#0a0a0b] z-40 flex flex-col items-center justify-center md:hidden"
-                        >
-                            {/* Background Elements for Menu */}
-                            <div className="absolute top-[-10%] right-[-10%] w-[50vw] h-[50vw] bg-primary/20 rounded-full blur-[100px] opacity-30" />
+                    <motion.div
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.3 }}
+                        className="fixed inset-0 bg-[#0a0a0b] z-40 flex flex-col items-center justify-center md:hidden"
+                    >
+                        {/* Background Elements for Menu */}
+                        <div className="absolute top-[-10%] right-[-10%] w-[50vw] h-[50vw] bg-primary/20 rounded-full blur-[100px] opacity-30" />
 
-                            <div className="flex flex-col space-y-6 text-center relative z-10">
-                                {navItems.map((item, key) => (
-                                    <motion.a
-                                        key={key}
-                                        href={item.href}
-                                        variants={fadeUp}
-                                        initial="hidden"
-                                        animate="visible"
-                                        custom={key} // Delays can be handled by index * delay in variant if simplified
-                                        transition={{ delay: key * 0.1 }}
-                                        className="text-3xl text-white/90 font-light hover:text-primary transition-colors duration-300"
-                                        onClick={(e) => handleScroll(e, item.href)}
-                                    >
-                                        {item.name}
-                                    </motion.a>
-                                ))}
-                            </div>
-                        </motion.div>
+                        <div className="flex flex-col space-y-6 text-center relative z-10">
+                            {navItems.map((item, key) => (
+                                <motion.a
+                                    key={key}
+                                    href={item.href}
+                                    variants={fadeUp}
+                                    initial="hidden"
+                                    animate="visible"
+                                    custom={key} // Delays can be handled by index * delay in variant if simplified
+                                    transition={{ delay: key * 0.1 }}
+                                    className="text-3xl text-white/90 font-light hover:text-primary transition-colors duration-300"
+                                    onClick={(e) => handleScroll(e, item.href)}
+                                >
+                                    {item.name}
+                                </motion.a>
+                            ))}
+                        </div>
+                    </motion.div>
                     )}
                 </AnimatePresence>
             </div>
