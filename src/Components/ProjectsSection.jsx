@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ExternalLink, Github, ArrowUpRight } from "lucide-react";
 import { fadeUp, staggerContainer } from "../lib/animation-utils";
+import { useScrollLock } from "../hooks/use-scroll-lock";
 
 const projects = [
     {
@@ -48,6 +49,7 @@ const projects = [
 
 export const ProjectsSection = () => {
     const [selectedId, setSelectedId] = useState(null);
+    useScrollLock(!!selectedId);
 
     return (
         <section id="projects" className="py-24 relative z-10 min-h-screen snap-start flex flex-col justify-center">
@@ -120,7 +122,7 @@ export const ProjectsSection = () => {
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
-                                className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+                                className="absolute inset-0 bg-[#0f0f11]/98 backdrop-blur-md"
                                 onClick={() => setSelectedId(null)}
                             />
                             <motion.div

@@ -3,6 +3,7 @@ import { cn } from "../lib/utils";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import { fadeUp } from "../lib/animation-utils";
+import { useScrollLock } from "../hooks/use-scroll-lock";
 
 const navItems = [
     { name: "Home", href: "#hero" },
@@ -16,6 +17,7 @@ export const Navbar = () => {
     const { scrollY } = useScroll();
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    useScrollLock(isMenuOpen);
 
     // Smooth scroll handler
     const handleScroll = (e, href) => {
@@ -85,7 +87,7 @@ export const Navbar = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.3 }}
-                        className="fixed inset-0 bg-[#0a0a0b] z-40 flex flex-col items-center justify-center md:hidden"
+                        className="fixed inset-0 bg-[#0a0a0b] z-[60] flex flex-col items-center justify-center md:hidden"
                     >
                         {/* Background Elements for Menu */}
                         <div className="absolute top-[-10%] right-[-10%] w-[50vw] h-[50vw] bg-primary/20 rounded-full blur-[100px] opacity-30" />
