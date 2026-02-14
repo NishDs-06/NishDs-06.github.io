@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, MessageSquare, Send } from "lucide-react";
+import { Mail, MessageSquare, Send, Linkedin, Github } from "lucide-react";
 import { fadeUp, staggerContainer } from "../lib/animation-utils";
 
 export const ContactSection = () => {
@@ -70,18 +70,24 @@ export const ContactSection = () => {
                             </div>
                         </form>
 
-                        <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-center gap-8 text-gray-400 text-sm">
+                        <div className="mt-16 pt-8 border-t border-white/5 flex flex-wrap items-center justify-center gap-8 text-gray-400 text-sm">
                             <a href="mailto:ndszz306@gmail.com" className="flex items-center gap-3 hover:text-primary transition-colors cursor-pointer group">
                                 <div className="p-2 bg-white/5 rounded-full group-hover:bg-primary/20 transition-colors">
                                     <Mail size={16} className="text-white group-hover:text-primary" />
                                 </div>
                                 <span>ndszz306@gmail.com</span>
                             </a>
-                            <a href="#" className="flex items-center gap-3 hover:text-primary transition-colors cursor-pointer group">
+                            <a href="https://www.linkedin.com/in/nishds30" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-primary transition-colors cursor-pointer group">
                                 <div className="p-2 bg-white/5 rounded-full group-hover:bg-primary/20 transition-colors">
-                                    <MessageSquare size={16} className="text-white group-hover:text-primary" />
+                                    <Linkedin size={16} className="text-white group-hover:text-primary" />
                                 </div>
-                                <span>@nishanth_dsv</span>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/NishDs-06" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-primary transition-colors cursor-pointer group">
+                                <div className="p-2 bg-white/5 rounded-full group-hover:bg-primary/20 transition-colors">
+                                    <Github size={16} className="text-white group-hover:text-primary" />
+                                </div>
+                                <span>GitHub</span>
                             </a>
                         </div>
                     </motion.div>

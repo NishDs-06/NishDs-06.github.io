@@ -1,18 +1,27 @@
 import { useEffect } from 'react';
+import { useLenis } from 'lenis/react';
 
 export const useScrollLock = (isLocked) => {
-    useEffect(() => {
-        if (isLocked) {
-            const originalStyle = window.getComputedStyle(document.body).overflow;
-            document.body.style.overflow = 'hidden';
-            // Optional: Add padding-right to prevent layout shift if scrollbar disappears
-            // const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-            // document.body.style.paddingRight = `${scrollbarWidth}px`; 
+    const lenis = useLenis();
 
-            return () => {
-                document.body.style.overflow = originalStyle;
-                // document.body.style.paddingRight = '0px';
-            };
+    useEffect(() => {
+        const originalStyle = window.getComputedStyle(document.body).overflow;
+
+        if (isLocked) {
+            lenis?.stop();
+            document.body.style.overflow = 'hidden';
+            // Prevent touch scrolling on mobile
+            // document.documentElement.style.overflow = 'hidden';
+        } else {
+            lenis?.start();
+            document.body.style.overflow = originalStyle;
+            // document.documentElement.style.overflow = '';
         }
-    }, [isLocked]);
+
+        return () => {
+            lenis?.start();
+            document.body.style.overflow = originalStyle;
+            // document.documentElement.style.overflow = '';
+        };
+    }, [isLocked, lenis]);
 };

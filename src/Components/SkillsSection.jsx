@@ -4,16 +4,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import { fadeUp, staggerContainer } from "../lib/animation-utils";
 
 const skills = [
-  { name: "HTML/CSS", level: 95, category: "frontend" },
-  { name: "JavaScript", level: 60, category: "frontend" },
-  { name: "React", level: 60, category: "frontend" },
-  { name: "Tailwind CSS", level: 79, category: "frontend" },
-  { name: "Flask", level: 50, category: "backend" },
-  { name: "Git/GitHub", level: 85, category: "tools" },
-  { name: "Docker", level: 75, category: "tools" },
-  { name: "VS Code", level: 90, category: "tools" },
+  { name: "Verilog / SystemVerilog", level: 85, category: "hardware" },
+  { name: "Digital Logic Design", level: 90, category: "hardware" },
+  { name: "Python (Automation/Scripting)", level: 88, category: "backend" },
+  { name: "Linux / Bash", level: 80, category: "tools" },
+  { name: "React / Frontend", level: 75, category: "frontend" },
+  { name: "API Integration", level: 85, category: "backend" },
+  { name: "Docker / Containers", level: 70, category: "tools" },
+  { name: "Git / GitHub", level: 90, category: "tools" },
 ];
-const categories = ["all", "frontend", "backend", "tools"];
+const categories = ["all", "hardware", "software", "tools"];
 
 export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");

@@ -1,0 +1,86 @@
+[
+    {
+        "id": "cyber-forensics",
+        "title": "Cyber-Forensics Behavioral Analysis System",
+        "category": "Security & AI",
+        "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800",
+        "description": "A concept-based platform that introduces an intent-focused evaluation model to analyze malicious behavior patterns instead of only tracking visible actions.",
+        "longDescription": "Designed a concept-based cyber-forensics platform that introduces an **intent-focused evaluation model** to analyze malicious behavior patterns instead of only tracking visible actions. The project emphasizes investigative logic, behavioral analysis, and system-level security thinking. It reflects my ability to approach problems Systems-first, not tool-first.",
+        "technologies": [
+            "Python",
+            "Machine Learning",
+            "Behavioral Analysis",
+            "Security"
+        ],
+        "link": "#",
+        "github": "https://github.com/NishDs-06",
+        "featured": true
+    },
+    {
+        "id": "automation-pipelines",
+        "title": "Automation Workflows & API Systems",
+        "category": "DevOps & Automation",
+        "image": "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?auto=format&fit=crop&q=80&w=800",
+        "description": "Built automation pipelines integrating APIs and cloud tools to handle real-world issues like connection failures, retries, and data flow reliability.",
+        "longDescription": "Built automation pipelines integrating APIs and cloud tools using workflow automation platforms. Worked on handling real-world issues like connection failures, retries, and data flow reliability. This gave me practical exposure to backend logic, distributed system behavior, and fault handling.",
+        "technologies": [
+            "APIs",
+            "Cloud Tools",
+            "Workflow Automation",
+            "Error Handling"
+        ],
+        "link": "#",
+        "github": "https://github.com/NishDs-06",
+        "featured": true
+    },
+    {
+        "id": "self-hosting",
+        "title": "Self-Hosting & Infrastructure Exploration",
+        "category": "Infrastructure",
+        "image": "https://images.unsplash.com/photo-1558494949-ef526b0042a0?auto=format&fit=crop&q=80&w=800",
+        "description": "Exploration of local servers, service exposure, networking configurations, and deployment debugging.",
+        "longDescription": "Worked with local servers, service exposure, networking configurations, and deployment debugging. Explored how services run in isolated environments and how networking affects system behavior. This built a DevOps-style understanding beyond just application development.",
+        "technologies": [
+            "Linux",
+            "Networking",
+            "Self-Hosting",
+            "Docker"
+        ],
+        "link": "#",
+        "github": "https://github.com/NishDs-06",
+        "featured": false
+    },
+    {
+        "id": "digital-systems",
+        "title": "Digital Systems Design (VLSI Track)",
+        "category": "Hardware Design",
+        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800",
+        "description": "Designed and simulated digital circuits such as multiplexers, full adders, and full subtractors using Verilog.",
+        "longDescription": "Designed and simulated digital circuits such as multiplexers, full adders, and full subtractors using **Verilog** and testbenches. Strengthened my understanding of structured logic design and hardware-level problem solving, which influences how I design software systems.",
+        "technologies": [
+            "Verilog",
+            "Digital Logic",
+            "Circuit Design",
+            "Simulation"
+        ],
+        "link": "#",
+        "github": "https://github.com/NishDs-06",
+        "featured": false
+    },
+    {
+        "id": "hackathon-ml",
+        "title": "Hackathon Experience (ML/Data Theme)",
+        "category": "Data Science",
+        "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+        "description": "Participated in a machine learning and data-oriented hackathon environment, contributing to technical structuring and problem-solving.",
+        "longDescription": "Participated in a machine learning and data-oriented hackathon environment, contributing to technical structuring and problem-solving under time constraints. Improved collaboration, adaptability, and fast decision-making in team-based technical settings.",
+        "technologies": [
+            "Machine Learning",
+            "Data Analysis",
+            "Team Collaboration"
+        ],
+        "link": "#",
+        "github": "https://github.com/NishDs-06",
+        "featured": false
+    }
+]

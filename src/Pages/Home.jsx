@@ -5,6 +5,7 @@ import { SkillsSection } from "../Components/SkillsSection";
 import { ProjectsSection } from "../Components/ProjectsSection";
 import { ContactSection } from "../Components/ContactSection";
 import { FluidText } from "../Components/FluidText";
+import { FeaturedCarousel } from "../Components/FeaturedCarousel";
 
 export const Home = () => {
     return <div className="min-h-screen text-foreground overflow-x-hidden selection:bg-purple-500/30">
@@ -14,6 +15,7 @@ export const Home = () => {
             <FluidText />
             <Aboutme />
             <SkillsSection />
+            <FeaturedCarousel />
             <ProjectsSection />
             <ContactSection />
         </main>
