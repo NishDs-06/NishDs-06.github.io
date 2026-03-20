@@ -49,7 +49,7 @@ export const ProjectsSection = () => {
 
                 <AnimatePresence>
                     {selectedId && (
-                        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+                        <div className="fixed inset-0 z-50 flex items-center justify-center px-12 py-10 md:px-24 md:py-16">
                             <motion.div
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
@@ -73,17 +73,17 @@ export const ProjectsSection = () => {
                                                 <X size={22} />
                                             </motion.button>
 
-                                            <motion.div className="relative h-64 md:h-96 w-full shrink-0">
+                                            <motion.div className="relative h-64 md:h-80 w-full shrink-0">
                                                 <motion.img
                                                     layoutId={`image-${project.id}`}
                                                     src={project.image}
                                                     alt={project.title}
-                                                    className="w-full h-full object-cover"
+                                                    className="w-full h-full object-cover object-top"
                                                 />
                                                 <div className="absolute inset-0 bg-gradient-to-t from-[#0f0f11] via-transparent to-transparent"></div>
                                             </motion.div>
 
-                                            <div className="px-10 py-10 overflow-y-auto">
+                                            <div className="px-8 py-6 overflow-y-auto flex-1 min-h-0">
                                                 <div className="flex flex-col gap-6">
                                                     <div>
                                                         <motion.h3 layoutId={`title-${project.id}`} className="text-3xl md:text-4xl font-bold text-white mb-2">
@@ -108,19 +108,20 @@ export const ProjectsSection = () => {
                                                             ))}
                                                         </div>
                                                     </div>
-
-                                                    <div className="pt-6 flex gap-4 mt-auto">
-                                                        {project.link !== "#" && (
-                                                            <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex-1 cosmic-button flex items-center justify-center gap-2 text-center group">
-                                                                <ExternalLink size={18} />
-                                                                <span>Live Demo</span>
-                                                            </a>
-                                                        )}
-                                                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex-1 px-6 py-3 rounded-full border border-white/10 hover:bg-white/5 transition-all flex items-center justify-center gap-2 text-white font-medium hover:border-white/30">
-                                                            <Github size={18} /> Source Code
-                                                        </a>
-                                                    </div>
                                                 </div>
+                                            </div>
+
+                                            {/* Sticky footer — always visible */}
+                                            <div className="shrink-0 px-10 py-5 border-t border-white/10 bg-[#0f0f11] flex gap-4">
+                                                {project.link !== "#" && (
+                                                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex-1 cosmic-button flex items-center justify-center gap-2 text-center group">
+                                                        <ExternalLink size={18} />
+                                                        <span>Live Demo</span>
+                                                    </a>
+                                                )}
+                                                <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex-1 px-6 py-3 rounded-full border border-white/10 hover:bg-white/5 transition-all flex items-center justify-center gap-2 text-white font-medium hover:border-white/30">
+                                                    <Github size={18} /> Source Code
+                                                </a>
                                             </div>
                                         </>
                                     );
