@@ -59,7 +59,7 @@ export const ProjectsSection = () => {
                             />
                             <motion.div
                                 layoutId={`card-${selectedId}`}
-                                className="w-full max-w-3xl bg-[#0f0f11] rounded-3xl overflow-hidden shadow-2xl border border-white/10 relative z-10 max-h-[90vh] flex flex-col"
+                                className="w-full max-w-5xl bg-[#0f0f11] rounded-3xl overflow-hidden shadow-2xl border border-white/10 relative z-10 max-h-[90vh] flex flex-col"
                             >
                                 {(() => {
                                     const project = projectsData.find((p) => p.id === selectedId);
@@ -83,7 +83,7 @@ export const ProjectsSection = () => {
                                                 <div className="absolute inset-0 bg-gradient-to-t from-[#0f0f11] via-transparent to-transparent"></div>
                                             </motion.div>
 
-                                            <div className="p-8 overflow-y-auto">
+                                            <div className="px-10 py-10 overflow-y-auto">
                                                 <div className="flex flex-col gap-6">
                                                     <div>
                                                         <motion.h3 layoutId={`title-${project.id}`} className="text-3xl md:text-4xl font-bold text-white mb-2">
@@ -110,10 +110,12 @@ export const ProjectsSection = () => {
                                                     </div>
 
                                                     <div className="pt-6 flex gap-4 mt-auto">
-                                                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex-1 cosmic-button flex items-center justify-center gap-2 text-center group">
-                                                            <ExternalLink size={18} />
-                                                            <span>Live Demo</span>
-                                                        </a>
+                                                        {project.link !== "#" && (
+                                                            <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex-1 cosmic-button flex items-center justify-center gap-2 text-center group">
+                                                                <ExternalLink size={18} />
+                                                                <span>Live Demo</span>
+                                                            </a>
+                                                        )}
                                                         <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex-1 px-6 py-3 rounded-full border border-white/10 hover:bg-white/5 transition-all flex items-center justify-center gap-2 text-white font-medium hover:border-white/30">
                                                             <Github size={18} /> Source Code
                                                         </a>

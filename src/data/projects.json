@@ -1,86 +1,62 @@
 [
-    {
-        "id": "cyber-forensics",
-        "title": "Cyber-Forensics Behavioral Analysis System",
-        "category": "Security & AI",
-        "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800",
-        "description": "A concept-based platform that introduces an intent-focused evaluation model to analyze malicious behavior patterns instead of only tracking visible actions.",
-        "longDescription": "Designed a concept-based cyber-forensics platform that introduces an **intent-focused evaluation model** to analyze malicious behavior patterns instead of only tracking visible actions. The project emphasizes investigative logic, behavioral analysis, and system-level security thinking. It reflects my ability to approach problems Systems-first, not tool-first.",
-        "technologies": [
-            "Python",
-            "Machine Learning",
-            "Behavioral Analysis",
-            "Security"
-        ],
-        "link": "#",
-        "github": "https://github.com/NishDs-06",
-        "featured": true
-    },
-    {
-        "id": "automation-pipelines",
-        "title": "Automation Workflows & API Systems",
-        "category": "DevOps & Automation",
-        "image": "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?auto=format&fit=crop&q=80&w=800",
-        "description": "Built automation pipelines integrating APIs and cloud tools to handle real-world issues like connection failures, retries, and data flow reliability.",
-        "longDescription": "Built automation pipelines integrating APIs and cloud tools using workflow automation platforms. Worked on handling real-world issues like connection failures, retries, and data flow reliability. This gave me practical exposure to backend logic, distributed system behavior, and fault handling.",
-        "technologies": [
-            "APIs",
-            "Cloud Tools",
-            "Workflow Automation",
-            "Error Handling"
-        ],
-        "link": "#",
-        "github": "https://github.com/NishDs-06",
-        "featured": true
-    },
-    {
-        "id": "self-hosting",
-        "title": "Self-Hosting & Infrastructure Exploration",
-        "category": "Infrastructure",
-        "image": "https://images.unsplash.com/photo-1558494949-ef526b0042a0?auto=format&fit=crop&q=80&w=800",
-        "description": "Exploration of local servers, service exposure, networking configurations, and deployment debugging.",
-        "longDescription": "Worked with local servers, service exposure, networking configurations, and deployment debugging. Explored how services run in isolated environments and how networking affects system behavior. This built a DevOps-style understanding beyond just application development.",
-        "technologies": [
-            "Linux",
-            "Networking",
-            "Self-Hosting",
-            "Docker"
-        ],
-        "link": "#",
-        "github": "https://github.com/NishDs-06",
-        "featured": false
-    },
-    {
-        "id": "digital-systems",
-        "title": "Digital Systems Design (VLSI Track)",
-        "category": "Hardware Design",
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800",
-        "description": "Designed and simulated digital circuits such as multiplexers, full adders, and full subtractors using Verilog.",
-        "longDescription": "Designed and simulated digital circuits such as multiplexers, full adders, and full subtractors using **Verilog** and testbenches. Strengthened my understanding of structured logic design and hardware-level problem solving, which influences how I design software systems.",
-        "technologies": [
-            "Verilog",
-            "Digital Logic",
-            "Circuit Design",
-            "Simulation"
-        ],
-        "link": "#",
-        "github": "https://github.com/NishDs-06",
-        "featured": false
-    },
-    {
-        "id": "hackathon-ml",
-        "title": "Hackathon Experience (ML/Data Theme)",
-        "category": "Data Science",
-        "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-        "description": "Participated in a machine learning and data-oriented hackathon environment, contributing to technical structuring and problem-solving.",
-        "longDescription": "Participated in a machine learning and data-oriented hackathon environment, contributing to technical structuring and problem-solving under time constraints. Improved collaboration, adaptability, and fast decision-making in team-based technical settings.",
-        "technologies": [
-            "Machine Learning",
-            "Data Analysis",
-            "Team Collaboration"
-        ],
-        "link": "#",
-        "github": "https://github.com/NishDs-06",
-        "featured": false
-    }
+  {
+    "id": "datavex",
+    "title": "DataVex",
+    "category": "AI / B2B SaaS",
+    "image": "/datavex-screenshot.jpg",
+    "description": "A full-stack B2B sales intelligence platform that scrapes public company signals and uses a **5-agent AI pipeline** to score leads, rank targets, and auto-generate personalized outreach — answering \"who to sell to, why, and how.\"",
+    "longDescription": "DataVex is a B2B sales intelligence platform built as a hackathon project with four integrated layers: a React + Vite frontend (Lead Board, Company Reports, Outreach views), a FastAPI backend with a **5-agent LLM deep-scan pipeline** using GPT-4.1 via the Bytez API, a standalone heuristic discovery pipeline, and Python scrapers for live signal collection. The 5-agent pipeline runs sequentially: a Prompt Agent parses the query, a Research Agent scrapes GitHub and DuckDuckGo, an Analysis Agent extracts signals via LLM, a Synthesis Agent builds the narrative, and a Decision Agent issues the final score (0–100) and outreach plan. I architected and built the complete system end-to-end — all agent logic, the FastAPI routers, SQLAlchemy database layer, LLM client, and the React frontend with live scan polling, SVG score arcs, and company report views.",
+    "technologies": ["React", "FastAPI", "GPT-4.1", "SQLAlchemy", "Python", "DuckDuckGo API"],
+    "link": "#",
+    "github": "https://github.com/NishDs-06/datavex",
+    "featured": true
+  },
+  {
+    "id": "network-topology",
+    "title": "Network Topology Identifier",
+    "category": "ML / Telecom AI",
+    "image": "/network-topology-screenshot.png",
+    "description": "An AI-powered 5G fronthaul network analysis system that automatically identifies topology groups, detects congestion anomalies, and provides actionable insights through an LLM copilot and interactive React dashboard.",
+    "longDescription": "This system ingests raw 5G fronthaul .dat files and runs a full ML pipeline: preprocessing normalizes the data, **hierarchical clustering** identifies which cells share a topology group via correlation analysis, and a rolling-window anomaly detector flags throughput drops exceeding 30% as congestion events. A FastAPI backend exposes REST endpoints for cells, topology groups, similarity matrices, and recommendations. The React + Vite frontend renders interactive heatmaps, topology graphs, and propagation flow diagrams. An **Ollama-powered LLM copilot** (llama3.1:8b) acts as a chat interface — answering questions like \"why is Cell 5 flagged?\" or \"what cells share topology with Cell 10?\" in plain language. My role covered the complete backend, ML pipeline integration, REST API design, and system architecture — connecting all layers into a deployable product.",
+    "technologies": ["React", "FastAPI", "Python", "Ollama", "Hierarchical Clustering", "LLM"],
+    "link": "#",
+    "github": "https://github.com/NishDs-06/Network_Toplogy_Idetificaiton",
+    "featured": false
+  },
+  {
+    "id": "ved-website",
+    "title": "VED Club Website",
+    "category": "Creative Frontend",
+    "image": "/ved-screenshot.png",
+    "description": "The official website for VED — the VLSI & Embedded Design Club at MIT Bangalore — built entirely solo with a canvas-rendered dot-matrix logo that morphs into a chip footprint on scroll, GSAP-driven horizontal panels, and a chip-boot loader animation.",
+    "longDescription": "Built solo from scratch for the official VLSI & Embedded Design Club at MIT Bangalore. The centerpiece is a **multi-phase canvas renderer**: dots spell \"VED\" on load, then morph into a chip floorplan layout as the user scrolls, before crossfading into a fully drawn solid-chip illustration with labeled functional blocks (CPU CORE, CACHE, ALU, SRAM), metallic pin rows, and a diagonal glint animation. **GSAP ScrollTrigger** drives a horizontally-scrolling Domains section with five animated SVG technical visualizations — an oscilloscope waveform, Bode plot, 5-stage RISC-V pipeline, standard-cell placement view, and an MCU system diagram. Also includes a Lenis smooth scroll setup with custom snap logic, IntersectionObserver-gated canvas loops for performance, a magnetic cursor, mobile-responsive layouts, and a ChipLoader boot animation sequence. Every component, animation, and design decision is my own work.",
+    "technologies": ["React", "GSAP", "Lenis", "Canvas API", "Vite", "CSS Modules"],
+    "link": "https://ved-sand.vercel.app/",
+    "github": "https://github.com/NishDs-06/VED",
+    "featured": true
+  },
+  {
+    "id": "cinesense",
+    "title": "CineSense",
+    "category": "Full Stack / ML",
+    "image": "/cinesense-screenshot.png",
+    "description": "A full-stack personalized movie discovery platform that recommends films and explains exactly why each one was suggested — combining a custom ML recommendation engine with a FastAPI backend and React + Tailwind frontend.",
+    "longDescription": "CineSense answers not just \"what to watch\" but **\"why this movie for you\"** — an explainability layer on top of a content-based ML recommendation engine. The system has clear separation of concerns: Kushagra built the recommendation engine and scoring logic, Amrita designed the database schema and persistence layer, Harshita built and refined the UI, and I served as **backend and integration lead** — designing all FastAPI endpoints, connecting the ML engine to the backend, handling data flow between all three layers, implementing user authentication and session logic, and leading end-to-end debugging and deployment readiness. The hardest part wasn't any single component — it was making all four independently-built pieces talk to each other reliably under real conditions.",
+    "technologies": ["React", "Tailwind", "FastAPI", "Python", "SQL", "ML"],
+    "link": "#",
+    "github": "https://github.com",
+    "featured": false
+  },
+  {
+    "id": "sports-coach-rag",
+    "title": "AI Sports Coach",
+    "category": "RAG / LLM",
+    "image": "/sports-coach-screenshot.png",
+    "description": "A RAG pipeline that generates personalized sports training plans by semantically retrieving real athlete programs from a ChromaDB vector store and adapting them via a locally-hosted LLM — no hallucinations, no OpenAI dependency.",
+    "longDescription": "Most AI fitness tools generate generic plans or hallucinate exercises. This system instead **retrieves the most semantically similar real training programs** from a persistent ChromaDB vector database (embedded with SentenceTransformers MiniLM), then instructs Ollama (gemma3, running fully offline) to adapt the retrieved context to the user's specific profile. The result is grounded, structured, and realistic. My role covered the entire \"brain\" of the system: the FastAPI backend, the **full RAG pipeline** (query processing → top-K ChromaDB retrieval → prompt construction → LLM generation), structured prompt engineering to enforce week-by-day-by-exercise output schemas, a hybrid input system combining natural language parsing (regex + merging) with structured form inputs, and end-to-end system integration. Harshita built the Streamlit UI, Amrita prepared the dataset and embedding pipeline, and Kushagra assisted with backend infrastructure.",
+    "technologies": ["FastAPI", "ChromaDB", "Ollama", "SentenceTransformers", "Streamlit", "Python"],
+    "link": "#",
+    "github": "https://github.com",
+    "featured": true
+  }
 ]

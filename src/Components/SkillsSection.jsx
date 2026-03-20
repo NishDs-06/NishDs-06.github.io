@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { fadeUp, staggerContainer } from "../lib/animation-utils";
 
 const skills = [
-  { name: "Verilog / SystemVerilog", level: 85, category: "hardware" },
+  { name: "Verilog / SystemVerilog", level: 50, category: "hardware" },
   { name: "Digital Logic Design", level: 90, category: "hardware" },
   { name: "Python (Automation/Scripting)", level: 88, category: "backend" },
   { name: "Linux / Bash", level: 80, category: "tools" },
